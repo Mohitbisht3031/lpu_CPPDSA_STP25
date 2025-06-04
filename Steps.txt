@@ -1,0 +1,6 @@
+Hey, This is a file that will have the steps needed to clone and pull all the changes.
+
+Execute the below commands for cloning and pulling the changes
+1. git clone  https://github.com/Mohitbisht3031/lpu_CPPDSA_STP25.git (this need to be executed only once to clone the repo)
+2. go inside the folder
+3. git pull 
