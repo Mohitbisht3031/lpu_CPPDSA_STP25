@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+void update(vector<vector<int>>&v,int r,int c){
+    for(int i = 0;i<v.size();i++)v[i][c] = 0;
+    for(int i = 0;i<v[0].size();i++)v[r][i] = 0;
+}
+
+vector<vector<int>> makeZeroMatrix(vector<vector<int>>&mat){
+    vector<vector<int>>v(mat.size(),vector<int>(mat[0].size(),-1));
+    for(int i = 0 ;i<mat.size();i++){
+        for(int j = 0;j<mat[i].size();j++){
+            if(mat[i][j] == 0){
+                update(v,i,j);
+            }
+        }
+    }
+    for(int i = 0;i<v.size();i++){
+        for(int j =0 ;j<v[0].size();j++){
+            if(v[i][j] == -1)v[i][j] = mat[i][j];
+        }
+    }
+    return v;
+}
