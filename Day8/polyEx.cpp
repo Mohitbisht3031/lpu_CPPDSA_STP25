@@ -51,4 +51,30 @@ class Matrix{
             return Matrix(ans);
         }
 
+        Matrix  operator +(Matrix&m){
+            vector<vector<int>>ans(v.size(),vector<int>(v[0].size()));
+            for(int i = 0;i<v.size();i++){
+                for(int j = 0;j<v[i].size();j++){
+                    ans[i][j] = v[i][j] + m.v[i][j];
+                }
+            }
+            return Matrix(ans);
+        }
+
     };
+
+int max(int a,int b){
+    return max(a,b);
+}
+
+int max(int a,int b,int c){
+    return max(a,max(b,c));
+}
+
+
+int main(){
+    Matrix m1(4,4);
+    Matrix m2(4,4);
+    
+    Matrix m3 = m1+m2; // m1.+(m2)
+}
